@@ -83,6 +83,45 @@ public :
 
     void hapus()
     {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        cout << "\nEnter the roll number of the student whose number is to be deleted";
+
+        cout << "\nMasukkan NIM yang akan didelete";
+        int rollNo;
+        cin >> rollNo;
+
+        Node *current = START;
+
+        // Step 1 : Tranverse the list to find the node
+        while (current != NULL && current->noMhs != rollNo)
+        {
+            current = current->next;
+
+        }
+
+        if (current == NULL)
+        {
+            cout << "Record not found" << endl;
+            return;
+        }
+
+        // Step 2 : If node is at the beginning
+        if (current == START)
+        {
+            START = current->next; // Step 2a : START.next
+            if (START != NULL)
+            {
+                START->prev = NULL; // Step 2b : START.prev = NULL
+
+            } 
+        }
+
+
 
     }
 
