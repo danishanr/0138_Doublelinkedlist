@@ -77,8 +77,7 @@ public :
         // Insert last node
         if (current->next != NULL)
             current->next->prev = newNode; // Step 9c : current.next.prev = newNode
-        current->next = newNode; // Step 9d : current.next = newNode
-        
+        current->next = newNode; // Step 9d : current.next = newNode   
     }
 
     void hapus()
@@ -101,7 +100,6 @@ public :
         while (current != NULL && current->noMhs != rollNo)
         {
             current = current->next;
-
         }
 
         if (current == NULL)
@@ -117,7 +115,6 @@ public :
             if (START != NULL)
             {
                 START->prev = NULL; // Step 2b : START.prev = NULL
-
             } 
         }
         else
@@ -128,8 +125,6 @@ public :
             // Step 4 : If current is not the last node
             if(current->next != NULL)
                 current->next->prev = current->prev;
-
-
         }
 
         // Step 5 : Delete the node
